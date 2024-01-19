@@ -1,0 +1,10 @@
+import pandas as pd
+while True
+article = pd.read_csv('ListOfIdiots.csv', delimiter=';')
+names = ['user_id', 'user_name', 'user_age']
+article.to_csv("ListOfIdiots.csv", index=False, sep=";")
+col = str(input(''))
+num = int(input(''))
+def read_slot():
+    print(article.at[num, col])
+read_slot()
