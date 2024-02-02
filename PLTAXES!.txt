@@ -1,0 +1,16 @@
+
+x = []
+y = []
+
+with open('XLSX.csv', 'r') as datafile:
+    plotting = csv.reader(datafile, delimiter=';')
+
+    for ROWS in plotting:
+        x.append(float(ROWS[0]))
+        y.append(float(ROWS[1]))
+
+labels = 'Я', 'ХОЧУ', 'ЧИПСЫ', 'СЕЙЧАСЖЕ!!!!'
+sizes = [100, 100, 95, 1000]
+fig1, ax1 = plt.subplots()
+ax1.pie(sizes, labels=labels, autopct='%1.1f%%')
+plt.show()
