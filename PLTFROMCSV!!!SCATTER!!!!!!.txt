@@ -1,0 +1,22 @@
+import matplotlib.pyplot as plt
+import csv
+
+x = []
+y = []
+
+with open('XLSX.csv', 'r') as datafile:
+    plotting = csv.reader(datafile, delimiter=';')
+
+    for ROWS in plotting:
+        x.append(float(ROWS[0]))
+        y.append(float(ROWS[1]))
+
+plt.figure(figsize=(8,4))
+plt.scatter(x,y, label='line_1')
+plt.legend()
+plt.grid(linewidth=1)
+plt.xticks()
+plt.yticks()
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.show()
